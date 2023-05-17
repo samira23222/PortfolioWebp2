@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;1,300&family=Henny+Penny&family=Montserrat+Alternates:ital,wght@0,600;1,600;1,700&family=Pacifico&family=Raleway:wght@500&display=swap');
+
+
+$primary-color: lightskyblue;
+
+@mixin background-code {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    :hover {
+        color: $primary-color;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+ 
+}
+body {
+    width: 100%;
+    height: 100vh;
+}
+body::-webkit-scrollbar{
+    display: none;
+  }
+.container {
+    width: 100%;
+    height: 100vh;
+}
+.nbar {
+    display: flex;
+    justify-content: right;
+    .nav-box {
+        margin-left: 1%;
+    }
+}
+.b-ground {
+    background-image: url('./img/cloud-port2.png');
+    @include background-code();
+    :hover {
+        color: $primary-color;
+    }
+}
+.b-ground2 {
+    background-image: url('./img/cloud-port3.png');
+    @include background-code();
+}
+.b-ground3 {
+    background-image: url('./img/cloud-port4.png');
+    @include background-code();
+}
+
+.app-text {
+   
+    font-size: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Cormorant Garamond', serif
+    , 'Henny Penny', cursive
+  , 'Montserrat Alternates', sans-serif
+    , 'Pacifico', cursive
+    , 'Raleway', sans-serif;
+}
+
+.navbar {
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+  
+    .navbar-nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+  
+    .nav-item {
+      margin-left: 45px;
+      margin: 10px;
+      position: relative;
+      font-size: 20px;
+      padding: 35px;
+  
+      .nav-link {
+        text-decoration: none;
+        color: black;
+  
+        &:hover {
+          &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('./img/cloud-port4.png') center/contain no-repeat;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.1s ease-in; /* Faster transition duration */
+          }
+        }
+      }
+    }
+  
+    .nav-item:hover .nav-link:before {
+      opacity: 1;
+    }
+  }
+  .intro-text {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 45px;
+    margin-top: 10%;
+  }
+  .intro-text2 {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 25px;
+    
+  }
+  .container {
+    position: relative;
+  }
+  
+  .animation-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+ 
